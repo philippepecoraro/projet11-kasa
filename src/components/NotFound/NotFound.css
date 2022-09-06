@@ -1,0 +1,20 @@
+.Error {
+    text-align: center;
+    font-family: Montserrat;
+    color: #FF6060; 
+}
+
+.DefaultNumb {
+    font-weight: 700;
+    font-size: 288px;
+}
+
+.DefaultText {
+    font-weight: 500;
+    font-size: 36px;    
+}
+
+.DefaultLink {
+    font-size: 18px;
+    color: #FF6060;    
+}

@@ -1,0 +1,75 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;  
+    margin: 20px auto 0;  
+}
+
+svg#aLet, svg#kLet, svg#maison, svg#sLet {
+    display: inline-block;
+}
+
+svg#aLetMobile, svg#kLetMobile, svg#maisonMobile, svg#sLetMobile { 
+    display: none;
+}
+
+.mobileLogo {
+    border: 50px solid blue;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Montserrat;    
+    font-weight: 500;
+    font-size: 24px;  
+    color: #FF6060;   
+}
+
+.accueil, .accueilActive {
+    margin-right: 60px;
+    color: #FF6060; 
+}
+
+.accueil, .aPropos {    
+    text-decoration: none;      
+    }
+
+.aPropos, .aProposActive {    
+    color: #FF6060;     
+}
+
+@media screen and (max-width: 1320px)
+{
+    .header {
+        width: 100%;       
+    }
+}
+
+@media screen and (max-width: 1040px)
+{
+    .header {
+        width: 90%;      
+    }
+    .accueil, .accueilActive {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 475px) 
+    {
+        .nav-bar {
+            font-size: 16px;
+        }      
+        svg#aLet, svg#kLet, svg#maison, svg#sLet {           
+            display: none;
+        } 
+        svg#aLetMobile, svg#kLetMobile, svg#maisonMobile, svg#sLetMobile {          
+          display: inline-block;
+        } 
+}
+
