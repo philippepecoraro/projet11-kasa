@@ -1,5 +1,7 @@
 .home {      
-    border: 1px solid black;
+    border: 1px solid black;  
+    max-width: 1240px;
+    margin: auto;
 }
 
 .background {

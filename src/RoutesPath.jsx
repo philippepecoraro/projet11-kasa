@@ -4,6 +4,7 @@ import NotFound from './components/NotFound/NotFound';
 import Header from './components/Header/Header';
 import APropos from './pages/APropos/Apropos';
 import Logement from './pages/Logement/Logement';
+import Footer from './components/Footer/Footer';
 
 
 function RoutesPath() {
@@ -16,8 +17,9 @@ function RoutesPath() {
                     <Route path='/' element={<Home />} />
                     <Route path='/apropos' element={<APropos />} />
                     <Route path='*' element={<NotFound />} />
-                    <Route path='/ficheLogement/:id' element={<Logement />} />
+                    <Route path='/logement/:id' element={<Logement />} />
                 </Routes>
+                <Footer />
             </BrowserRouter>
         </div>
     )

@@ -3,18 +3,27 @@ import { Link } from 'react-router-dom';
 import backgroundImg from "../../assets/backgroundImg.png"
 import '../Home/Home.css'
 
-
-function Home() {
+const Home = () => {
+    console.log('Home')
     useEffect(() => {
         getAllData();
-    }, [])
+    }, []);
     const [appartData, setAppartData] = useState([])
-
     const getAllData = async () => {
-        const response = await fetch(`${process.env.PUBLIC_URL}/data/logements.json`);
-        const allData = await response.json();
-        console.log('allData:', allData)
-        setAppartData(allData);
+        console.log('getAllData')
+        try {
+            const response = await fetch(`${process.env.PUBLIC_URL}/data/logements.json`);
+            if (!response.ok) {
+                throw new Error(response.status)
+            } else {
+                const allData = await response.json();
+                console.log('allData:', allData)
+                setAppartData(allData);
+                console.log('useEffect')
+            }
+        } catch (error) {
+            console.log('error', error)
+        }
     }
 
     return (
@@ -26,7 +35,9 @@ function Home() {
             <div className='area'>
                 <div className='bodyData'>
                     {appartData.map(appart => (
-                        <Link key={appart.id} className={'section-article'} to={`/ficheLogement/${appart.id}`}
+                        <Link key={appart.id} className={'section-article'}
+                            to={`/logement/${appart.id}`}
+                            state={{ appartData }}
                         >
                             <div className='imgArea'></div>
                             <h2 className='title'>{appart.title}</h2>
@@ -38,5 +49,6 @@ function Home() {
         </div>
     )
 }
+
 
 export default Home;
