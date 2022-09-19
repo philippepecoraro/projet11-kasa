@@ -8,9 +8,29 @@ import { ReactComponent as MaisonMobile } from '../../assets/maisonMobile.svg'
 import { ReactComponent as SLetterMobile } from '../../assets/sLetterMobile.svg'
 import { ReactComponent as ALetterMobile } from '../../assets/aLetterMobile.svg'
 import '../Header/Header.css'
+import { useState, useEffect } from 'react';
 
 
 function Header() {
+    const accueil = 'Accueil'
+    const aPropos = 'A Propos'
+    const accueilUpper = 'ACCUEIL'
+    const aProposUpper = 'A PROPOS'
+
+    const [smallerScreen, setSmallerScreen] = useState(false);
+    console.log('smallerScreen:', smallerScreen)
+
+    const handler = () => {
+        const list = window.matchMedia("(max-width: 475px)");
+        setSmallerScreen(list.matches);
+    };
+    useEffect(() => {
+        handler();
+        window.addEventListener('resize', handler);
+        return () => {
+            window.removeEventListener('resize', handler);
+        };
+    }, []);
 
     return (
         <div className='header'>
@@ -25,17 +45,29 @@ function Header() {
                 <ALetterMobile />
             </div>
 
-            <div className='nav-bar'>
-                <NavLink to='/' className={({ isActive }) => {
-                    return isActive ? 'accueilActive' : 'accueil'
-                }}
-                >Accueil</NavLink>
+            {smallerScreen ?
+                <div className='nav-bar'>
+                    <NavLink to='/' className={({ isActive }) => {
+                        return isActive ? 'accueilActive' : 'accueil'
+                    }}
+                    >{accueilUpper}</NavLink>
+                    <NavLink to='/apropos' className={({ isActive }) => {
+                        return isActive ? 'aProposActive' : 'aPropos'
+                    }}
+                    >{aProposUpper}</NavLink>
+                </div> :
+                <div className='nav-bar'>
+                    <NavLink to='/' className={({ isActive }) => {
+                        return isActive ? 'accueilActive' : 'accueil'
+                    }}
+                    >{accueil}</NavLink>
+                    <NavLink to='/apropos' className={({ isActive }) => {
+                        return isActive ? 'aProposActive' : 'aPropos'
+                    }}
+                    >{aPropos}</NavLink>
+                </div>
+            }
 
-                <NavLink to='/apropos' className={({ isActive }) => {
-                    return isActive ? 'aProposActive' : 'aPropos'
-                }}
-                >A Propos</NavLink>
-            </div>
         </div>
     )
 }

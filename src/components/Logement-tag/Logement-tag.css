@@ -1,0 +1,29 @@
+.logementTags {
+    display: flex;
+    flex-direction: row;
+}
+
+.logementTag {   
+    display: flex;
+    flex-direction: row; 
+    width: 115px;
+    height: 25px;
+    background-color: #FF6060;;
+    border-radius: 10px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    font-size: 14px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 780px) 
+{
+    .logementTag {
+        width: 85px;
+        height: 20px;
+        font-size: 10px;    
+        margin-top: 10px;          
+    }
+}

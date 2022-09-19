@@ -1,0 +1,26 @@
+.logementRating {
+    display: flex;
+    flex-direction: row; 
+    margin-right: 3px;
+}
+
+.logementStar {
+    display: flex;
+    flex-direction: row;
+}
+
+svg#etMobile, svg#etMobileCouleur {
+    display: none;
+}
+@media screen and (max-width: 780px)
+ {
+    .logementRating {       
+        justify-content: space-between;        
+    } 
+    svg#etoile, svg#etCouleur {
+        display: none;
+    }
+    svg#etMobile, svg#etMobileCouleur {
+        display: block;
+    }  
+}

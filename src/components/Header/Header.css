@@ -46,24 +46,31 @@ svg#aLetMobile, svg#kLetMobile, svg#maisonMobile, svg#sLetMobile {
 @media screen and (max-width: 1320px)
 {
     .header {
-        width: 100%;       
+        width: auto;       
     }
 }
 
 @media screen and (max-width: 1040px)
 {
     .header {
-        width: 90%;      
+        width: auto;      
     }
     .accueil, .accueilActive {
         margin-right: 10px;
     }
 }
 
+@media screen and (max-width: 780px)
+{
+    .header {
+    margin: 0 20px;
+    }
+}
+
 @media screen and (max-width: 475px) 
     {
         .nav-bar {
-            font-size: 16px;
+            font-size: 12px;
         }      
         svg#aLet, svg#kLet, svg#maison, svg#sLet {           
             display: none;

@@ -1,0 +1,107 @@
+.logementDescEqui {
+    display: flex;
+    flex-direction: row;
+}
+
+.logementDescription, .logementEquipements {  
+    height: 300px;  
+    width: 100%;   
+    height: 100%;   
+}
+
+.logementEquipements {
+    margin: 25px 0 20px 0;
+}
+
+.logementDescription { 
+    margin-right: 80px;  
+    margin: 25px 80px 20px 0;
+} 
+
+.LogementDropdown {       
+    background-color: #FF6060;
+    border-radius: 10px;     
+    display: flex;
+    flex-direction: column;
+    width: auto;    
+} 
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;     
+    height: 50px;
+    border-radius: 10px;
+    background-color:#FF6060;
+    color: #FFFFFF;   
+    border: none;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;   
+    padding-left: 20px;  
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.logementDescriptionTextArea, .logementEquipementsTextArea {
+    background-color: #F6F6F6;  
+    height: 240px;
+    border-radius: 0 0 10px 10px;  
+    margin-top: -10px;
+}
+
+ .logementDescriptionText, .logementEquipementsText { 
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FF6060;
+    padding-top: 35px;
+    margin-left: 20px;   
+}
+
+.logementEquipementsText {
+    flex-direction: column;
+}
+
+svg#dropdownOpenMobile, svg#dropdownCloseMobile {
+    display: none;
+}
+
+@media screen and (max-width: 780px)
+{
+    button {
+        font-size: 13px;
+        height: 30px;
+    }
+    .logementDescEqui {      
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .logementDescription {
+        margin: 16px auto 0;        
+    }
+    .logementEquipements {
+        margin: 20px auto 20px;
+    }  
+    .logementDescriptionTextArea, .logementEquipementsTextArea {
+        height: 175px;
+    }
+    .logementDescriptionText, .logementEquipementsText {
+        font-size: 12px;   
+        padding-top: 20px;
+    } 
+    svg#dropdownOpenMobile, svg#dropdownCloseMobile {
+        display: block;
+    }
+    svg#dropdownOpen, svg#dropdownClose {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 350px)
+ {
+    .logementTags {
+        flex-direction: column;
+    }
+}
