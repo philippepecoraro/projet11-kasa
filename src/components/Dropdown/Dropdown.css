@@ -3,22 +3,19 @@
     flex-direction: row;
 }
 
-.logementDescription, .logementEquipements {  
-    height: 300px;  
-    width: 100%;   
-    height: 100%;   
+.logementDescription, .logementEquipements {     
+    width: 100%;      
 }
 
 .logementEquipements {
     margin: 25px 0 20px 0;
 }
 
-.logementDescription { 
-    margin-right: 80px;  
+.logementDescription {     
     margin: 25px 80px 20px 0;
 } 
 
-.LogementDropdown {       
+.Dropdown {       
     background-color: #FF6060;
     border-radius: 10px;     
     display: flex;
@@ -42,15 +39,19 @@ button {
     padding-left: 20px;  
     border-radius: 10px;
     z-index: 10;
+    cursor: pointer;
 }
 
-.logementDescriptionTextArea, .logementEquipementsTextArea {
+.logementDescriptionTextArea, .logementEquipementsTextArea, .aProposTextArea {
     background-color: #F6F6F6;  
     height: 240px;
     border-radius: 0 0 10px 10px;  
     margin-top: -10px;
 }
 
+.aProposTextArea {
+    height: auto;
+}
  .logementDescriptionText, .logementEquipementsText { 
     font-family: Montserrat;
     font-weight: 400;
@@ -60,11 +61,22 @@ button {
     margin-left: 20px;   
 }
 
+.aProposFiabiliteText, .aProposRespectText, .aProposServiceText,
+.aProposResponsabiliteText {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FF6060;
+    padding-top: 35px;  
+    margin: 0 29px 20px 20px;
+}
+
 .logementEquipementsText {
     flex-direction: column;
 }
 
-svg#dropdownOpenMobile, svg#dropdownCloseMobile {
+svg#dropdownOpenMobile, svg#dropdownCloseMobile
+ {
     display: none;
 }
 
@@ -73,6 +85,8 @@ svg#dropdownOpenMobile, svg#dropdownCloseMobile {
     button {
         font-size: 13px;
         height: 30px;
+        padding-left: 10px;
+        border-radius: 5px;
     }
     .logementDescEqui {      
         flex-wrap: wrap;
@@ -84,18 +98,25 @@ svg#dropdownOpenMobile, svg#dropdownCloseMobile {
     .logementEquipements {
         margin: 20px auto 20px;
     }  
-    .logementDescriptionTextArea, .logementEquipementsTextArea {
-        height: 175px;
+    .logementDescriptionTextArea, .logementEquipementsTextArea {      
+        height: auto;
     }
     .logementDescriptionText, .logementEquipementsText {
         font-size: 12px;   
-        padding-top: 20px;
+        padding-top: 25px;
+        margin-bottom: 5px;
+        margin-left: 10px;
     } 
     svg#dropdownOpenMobile, svg#dropdownCloseMobile {
         display: block;
     }
-    svg#dropdownOpen, svg#dropdownClose {
+    svg#dropdownOpen, svg#dropdownClose,
+    svg#dropdownOpenApropos, svg#dropdownCloseApropos {
         display: none;
+    }
+    .aProposFiabiliteText, .aProposRespectText, .aProposServiceText,
+    .aProposResponsabiliteText {
+        font-size: 12px;
     }
 }
 

@@ -1,20 +1,49 @@
 .Error {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
     font-family: Montserrat;
     color: #FF6060; 
+    max-width: 1440px;  
+    max-height: 1024px;
 }
 
 .DefaultNumb {
+    display: flex;
+    justify-content: center;
     font-weight: 700;
-    font-size: 288px;
+    font-size: 288px;  
+    margin: 170px 0 0;
 }
 
 .DefaultText {
+    display: flex;
+    justify-content: center;
     font-weight: 500;
     font-size: 36px;    
+    margin-left: 45px;
+    margin-right: 45px;
+    text-align: center;
 }
 
 .DefaultLink {
+    display: flex;
+    justify-content: center;
     font-size: 18px;
     color: #FF6060;    
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+@media screen and (max-width: 780px) {
+    .DefaultNumb {
+        font-size: 96px;
+    }
+    .DefaultText {
+        font-size: 18px;
+       
+    }
+    .DefaultLink {
+        font-size: 14px;
+    }
 }

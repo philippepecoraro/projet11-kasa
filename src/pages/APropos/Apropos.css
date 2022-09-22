@@ -1,0 +1,45 @@
+.aProposData {
+    max-width: 1240px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.aProposImage {
+    margin-top: 40px;
+}
+
+.aProposImg {
+    width: 100%;
+    height: auto;  
+}
+
+.aProposDropdown {
+    margin-bottom: 180px;
+}
+
+.fiabiliteDropdown, .respectDropdown, .serviceDropdown,
+.responsabiliteDropdown  {
+    max-width: 1023px;  
+    margin: 30px auto 0;
+}
+
+
+@media screen and (max-width: 780px)
+{
+    .aProposData {
+        margin: 0 20px 20px;
+    }
+    .fiabiliteDropdown, .respectDropdown, .serviceDropdown,
+    .responsabiliteDropdown {
+        margin: 20px auto;
+}
+    .aProposImage { 
+       height: auto;
+       margin-top: 20px;
+    }
+}
+
+

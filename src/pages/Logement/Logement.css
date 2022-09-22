@@ -10,10 +10,11 @@
 }
 
 .logementImg {
-    width: 100%;
-    height: auto;
+    width: 100%;   
+    max-height: 415px;
     border-radius: 25px;
     margin-top: 25px;
+    object-fit: cover;
 }
 
 .logementData {
@@ -105,7 +106,7 @@
     }
     .logementTitle {
         font-size: 18px;
-        max-width: 335px;margin: auto;
+        max-width: 335px;       
     }
     .logementLocation {
         font-size: 14px;      
@@ -120,4 +121,7 @@
     .logementNamePicture {
         margin-top: 0;
     }  
+    .logementImg {
+        border-radius: 10px;
+    }
  }
