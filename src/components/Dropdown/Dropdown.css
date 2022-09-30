@@ -59,6 +59,7 @@ button {
     color: #FF6060;
     padding-top: 35px;
     margin-left: 20px;   
+    line-height: 25px;
 }
 
 .aProposFiabiliteText, .aProposRespectText, .aProposServiceText,
@@ -96,7 +97,7 @@ svg#dropdownOpenMobile, svg#dropdownCloseMobile
         margin: 16px auto 0;        
     }
     .logementEquipements {
-        margin: 20px auto 20px;
+        margin: 20px auto 60px;
     }  
     .logementDescriptionTextArea, .logementEquipementsTextArea {      
         height: auto;
@@ -106,6 +107,7 @@ svg#dropdownOpenMobile, svg#dropdownCloseMobile
         padding-top: 25px;
         margin-bottom: 5px;
         margin-left: 10px;
+        line-height: 17px;
     } 
     svg#dropdownOpenMobile, svg#dropdownCloseMobile {
         display: block;
@@ -117,6 +119,8 @@ svg#dropdownOpenMobile, svg#dropdownCloseMobile
     .aProposFiabiliteText, .aProposRespectText, .aProposServiceText,
     .aProposResponsabiliteText {
         font-size: 12px;
+        margin: 0 10px 40px;
+        padding-top: 23px;
     }
 }
 

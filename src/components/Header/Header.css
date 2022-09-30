@@ -9,6 +9,7 @@
 
 svg#aLet, svg#kLet, svg#maison, svg#sLet {
     display: inline-block;
+    margin: 5px;
 }
 
 svg#aLetMobile, svg#kLetMobile, svg#maisonMobile, svg#sLetMobile { 
@@ -63,7 +64,7 @@ svg#aLetMobile, svg#kLetMobile, svg#maisonMobile, svg#sLetMobile {
 @media screen and (max-width: 780px)
 {
     .header {
-        margin: 30px 20px 0;
+        margin: 20px 20px 0;
     }
 }
 
@@ -77,6 +78,7 @@ svg#aLetMobile, svg#kLetMobile, svg#maisonMobile, svg#sLetMobile {
         } 
         svg#aLetMobile, svg#kLetMobile, svg#maisonMobile, svg#sLetMobile {          
           display: inline-block;
+          margin: 3px;
         } 
 }
 

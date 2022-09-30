@@ -18,7 +18,6 @@ function Header() {
     const aProposUpper = 'A PROPOS'
 
     const [smallerScreen, setSmallerScreen] = useState(false);
-    console.log('smallerScreen:', smallerScreen)
 
     const handler = () => {
         const list = window.matchMedia("(max-width: 475px)");
@@ -51,7 +50,7 @@ function Header() {
                         return isActive ? 'accueilActive' : 'accueil'
                     }}
                     >{accueilUpper}</NavLink>
-                    <NavLink to='/apropos' className={({ isActive }) => {
+                    <NavLink to='/apropos/' className={({ isActive }) => {
                         return isActive ? 'aProposActive' : 'aPropos'
                     }}
                     >{aProposUpper}</NavLink>

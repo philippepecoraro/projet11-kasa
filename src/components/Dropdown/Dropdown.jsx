@@ -15,11 +15,10 @@ function Dropdown({ buttonValue, dropdownText, logementClass }) {
     let apropos = false;
     if (logementClass === 'Fiabilite' || logementClass === 'Respect' || logementClass === 'Service'
         || logementClass === 'Responsabilite') {
-        apropos = true;
-        console.log('logementApropos:', apropos)
+            apropos = true;
+
     } else {
         apropos = false;
-        console.log('logementApropos:', apropos)
     }
 
     return (

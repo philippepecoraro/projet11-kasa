@@ -3,8 +3,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    border: 2px solid black;
+    margin: auto; 
 }
 
 .aProposImage {
@@ -39,6 +38,9 @@
     .aProposImage { 
        height: auto;
        margin-top: 20px;
+    }
+    .aProposDropdown {
+        margin-bottom: 130px;
     }
 }
 

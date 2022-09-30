@@ -4,6 +4,7 @@ import './Logement.css';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import Star from '../../components/Star/Star';
 import Tag from '../../components/Tag/Tag';
+import Carousel from '../../components/Carousel/Carousel';
 
 
 const Logement = () => {
@@ -38,7 +39,7 @@ const Logement = () => {
             {logement !== null && logement.tags && logement.description && logement.equipments &&
                 < div >
                     <div className='logementImage'>
-                        <img src={logement.cover} alt='' className='logementImg' />
+                        <Carousel slides={logement.pictures} />
                     </div>
 
                     <div className='logementData'>
@@ -49,8 +50,12 @@ const Logement = () => {
                         </div>
                         <div className='logementRightPart'>
                             <div className='logementNamePicture'>
-                                <h3 className='logementName'>{logement.host.name}</h3>
-                                <img src={logement.host.picture} alt='' className='logementPicture' />
+                                <h3 className='logementName'>
+                                    {(logement.host.name).split(' ').map((item, i) => {
+                                        return <p key={i}>{item}</p>
+                                    })}
+                                </h3>
+                                <img src={logement.host.picture} alt={(logement.host.name) + ' portrait'} className='logementPicture' />
                             </div>
                             <div>
                                 <Star logement={logement} />

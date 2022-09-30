@@ -6,7 +6,6 @@ import Dropdown from '../../components/Dropdown/Dropdown';
 
 
 function Apropos() {
-    console.log('a propos')
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const imageUrl = windowWidth >= 780 ? backgroundImg : backgroundMobileImg;
     useEffect(() => {

@@ -1,0 +1,51 @@
+.carousel {
+    position: relative;
+    width: 100%;   
+    object-fit: cover;
+    height: 100%;
+}
+
+.carouselArrowLeft {
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.carouselArrowRight {
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.carouselImage {
+    width: 100%;
+    height: 100%;
+}
+
+svg#arrowLeftMobile, svg#arrowRightMobile {
+    display: none;
+}
+
+.carouselImg {
+    width: 100%;   
+    max-height: 415px;
+    border-radius: 25px;   
+    object-fit: cover;  
+}
+
+@media screen and (max-width: 780px) 
+{
+    svg#arrowLeft, svg#arrowRight {
+        display: none;
+    }
+    svg#arrowLeftMobile, svg#arrowRightMobile {
+        display: block;
+    } 
+    .carouselImg {
+        border-radius: 10px;
+    }
+}
